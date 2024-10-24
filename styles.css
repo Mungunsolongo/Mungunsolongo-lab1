@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  .resume-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #1d1b29;
+    color: white;
+    border-radius: 8px;
+  }
+  
+  .left-section {
+    width: 35%;
+    background-color: #f0e4f1;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 75%;
+    margin-bottom: 20px;
+  }
+  
+  .name {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #1d1b29;
+    font-weight: 700;
+  }
+  
+  .title {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #000000;
+    font-weight: 500;
+  }
+  
+  .contact-info p {
+    margin: 10px 0;
+    color: #1d1b29;
+  }
+  
+  .Хэл, .Хобби {
+    margin-top: 30px;
+  }
+  
+  .Хэл p, .Хобби p, .Хобби ul {
+    color: #1d1b29; /* oroldohgui code garchigiin ongo*/
+  }
+  
+  .Хобби ul {
+    list-style: disc;
+    padding-left: 20px;
+  }
+  
+  .right-section {
+    width: 65%;
+    padding: 20px;
+  }
+  
+  .Миний-тухай, .ажлын-туршлага, .боловсрол, .профайл {
+    margin-bottom: 20px;
+  }
+  
+  .Миний-тухай ul, .ажлын-туршлага ul, .боловсрол ul {
+    list-style: none;
+    padding-left: 20px;
+  }
+  
+  h2 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+    color: #f7adfd;  /* oroldohgui code garchigiin ongo*/
+    font-weight: 600;
+  }
+  
+  h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  
+  ul li {
+    margin-bottom: 8px;
+  }
+  
+  .portfolio-items {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .portfolio-items .item {
+    background-color: #f0e4f1; /* oroldohgui code garchigiin ongo*/
+    padding: 10px;
+    border-radius: 5px;
+    width: 22%;
+    text-align: center;
+    color: #1d1b29;
+  }
+  
