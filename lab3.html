@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instagram Profile - Semantic Layout</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .container {
+    width: 80%;
+    max-width: 1000px;
+    background-color: #ffffff;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+  }
+  header {
+    background-color: #3f729b;
+    color: #ffffff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+  .profile-section {
+    display: flex;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  .profile-picture {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .profile-picture img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
+  .profile-info {
+    flex: 3;
+    padding-left: 20px;
+  }
+  .profile-info h2 {
+    margin: 0;
+  }
+  .profile-info p {
+    color: #888;
+    margin: 5px 0;
+  }
+  .profile-info .stats {
+    display: flex;
+    gap: 20px;
+  }
+  .profile-info .stats div {
+    font-weight: bold;
+  }
+  .profile-tabs {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  .profile-tabs a {
+    text-decoration: none;
+    color: #333;
+  }
+  .profile-tabs a.active {
+    color: #3f729b;
+    font-weight: bold;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px;
+  }
+  .gallery img {
+    width: 100%;
+    border-radius: 4px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Header Section -->
+  <header>
+    <h1>Instagram</h1>
+    <nav>
+      <input type="text" placeholder="Search">
+    </nav>
+    <div class="icons">
+      <a href="#">🏠</a>
+      <a href="#">💬</a>
+      <a href="#">➕</a>
+      <a href="#">❤️</a>
+      <a href="#">⚙️</a>
+    </div>
+  </header>
+
+  <!-- Profile Section -->
+  <section class="profile-section">
+    <div class="profile-picture">
+      <img src="3.jpg" alt="Profile Picture">
+    </div>
+    <div class="profile-info">
+      <h2>instagram</h2>
+      <p>Instagram<br>Discover what’s next on Instagram 🔍✨</p>
+      <a href="https://help.instagram.com">help.instagram.com</a>
+      <div class="stats">
+        <div><strong>7,160</strong> posts</div>
+        <div><strong>517M</strong> followers</div>
+        <div><strong>130</strong> following</div>
+      </div>
+      <button>Follow</button>
+    </div>
+  </section>
+
+  <!-- Highlights Section -->
+  <section class="highlights">
+    <figure><img src="7.jpg" alt="Highlight 1"><figcaption>Hello World</figcaption></figure>
+    <figure><img src="7.jpg" alt="Highlight 2"><figcaption>IG Tips</figcaption></figure>
+    <figure><img src="7.jpg" alt="Highlight 3"><figcaption>Moment</figcaption></figure>
+  </section>
+
+  <!-- Tabs Section -->
+  <nav class="profile-tabs">
+    <a href="#" class="active">Posts</a>
+    <a href="#">Guides</a>
+    <a href="#">Reels</a>
+    <a href="#">Videos</a>
+    <a href="#">Tagged</a>
+  </nav>
+
+  <!-- Gallery Section -->
+  <section class="gallery">
+    <img src="1.jpg" alt="Post 1">
+    <img src="2.jpg" alt="Post 2">
+    <img src="3.jpg" alt="Post 3">
+    <img src="4.jpg" alt="Post 4">
+    <img src="5.jpg" alt="Post 5">
+    <img src="6.jpg" alt="Post 6">
+  </section>
+</div>
+
+</body>
+</html>

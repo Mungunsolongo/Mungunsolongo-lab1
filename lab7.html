@@ -2,106 +2,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap Example</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <style>
-        /* Custom Styles */
-        .navbar {
-            margin-bottom: 0; /* Remove bottom margin from navbar */
-        }
-        .jumbotron {
-            padding-top: 0; /* Align the top of jumbotron with navbar */
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles5.css">
 </head>
 <body>
-
-<!-- Navigation Bar -->
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">Webjunto</a>
+    <header class="header">
+        <div class="navbar">
+            <h1 class="logo">WebJunto®</h1>
         </div>
-    </div>
-</nav>
+        <div class="jumbotron">
+            <h2>Hello, world!</h2>
+            <p>Welcome to Bootstrap v3.3.7. Check out this awesome jumbotron!</p>
+            <a href="#" class="learn-more">Learn More</a>
+        </div>
+    </header>
 
-<!-- Jumbotron Section -->
-<div class="jumbotron text-center" style="background-color: #3a3b7b; color: white;">
-    <h1>Hello, world!</h1>
-    <p>Welcome to Bootstrap v3.3.7. Check out this awesome jumbotron!</p>
-    <a href="#" class="btn btn-danger btn-lg">Learn More</a>
-</div>
-
-<div class="container">
-    <div class="row">
-        <!-- Main Content (Left Section) -->
-        <div class="col-md-8">
+    <main class="main-content">
+        <section class="text-section">
             <h2>Heading goes here</h2>
             <p>
-                Cupcake ipsum dolor sit amet caramels halvah soufflé sugar plum. Fruitcake lollipop tiramisu pastry halvah sweet lemon drops.
+                Cupcake ipsum dolor sit amet caramels halvah soufflé sugar plum. Fruitcake lollipop tiramisu pastry halvah sweet lemon drops. 
+                Jelly beans marshmallow jujubes. Pudding macaroon chocolate cake chupa chups. Tootsie roll wafer jelly beans cotton candy jelly. 
+                Liquorice chocolate cake tart jelly. Chocolate pastry liquorice cupcake chocolate.
             </p>
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/5MgBikgcWnY" 
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe>
+            </div>
+            <div class="important-note">
+                <p>Whoa! This is a super important alert!</p>
+            </div>
+        </section>
 
-            <!-- Embedded YouTube Video -->
-            <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/videoID"></iframe>
+        <aside class="sidebar">
+            <div class="messages">
+                <button class="messages-button">✉️ MESSAGES 3</button>
             </div>
 
-            <!-- Alert Section -->
-            <div class="alert alert-info">
-                <strong>Whoa!</strong> This is a super important alert!
-            </div>
-        </div>
-
-        <!-- Right Sidebar Section -->
-        <div class="col-md-4">
-            <!-- Message Section -->
-            <h4>Messages <span class="badge">3</span></h4>
-
-            <!-- Greeting Input Box -->
-            <div class="form-group">
-                <label for="greeting">Welcome Candidate!</label>
-                <input type="text" class="form-control" id="greeting" placeholder="Input your greeting...">
-                <button class="btn btn-pink btn-block">Send</button>
+            <div class="welcome">
+                <h3>Welcome Candidate!</h3>
+                <p>You are a Starfleet Academy candidate. Greet the Captain in a <strong>respectful</strong> fashion.</p>
+                <input type="text" placeholder="Input your greeting..." class="greeting-input">
+                <button class="send-button">SEND</button>
+                <a href="#" class="link">I don’t watch Star Trek and don’t get this reference</a>
             </div>
 
-            <!-- Tabs for Interactivity -->
-            <ul class="nav nav-tabs">
-                <li class="active"><a data-toggle="tab" href="#home">Starfleet</a></li>
-                <li><a data-toggle="tab" href="#menu1">Space</a></li>
-            </ul>
-
-            <div class="tab-content">
-                <div id="home" class="tab-pane fade in active">
-                    <h3>Starfleet Academy</h3>
-                    <p>Greet the Captain in a respectful fashion.</p>
+            <div class="vote">
+                <p>Cast your vote! What do you think about space? See vote progress bar below!</p>
+                <div class="progress-bar-container">
+                    <div class="progress-bar"></div>
                 </div>
-                <div id="menu1" class="tab-pane fade">
-                    <h3>Space Exploration</h3>
-                    <p>What do you think about space?</p>
+                <div class="vote-buttons">
+                    <button class="vote-button cool">COOL</button>
+                    <button class="vote-button lame">LAME</button>
                 </div>
             </div>
+        </aside>
+    </main>
 
-            <!-- Voting Section -->
-            <div class="progress">
-                <div class="progress-bar progress-bar-info" role="progressbar" style="width:60%">
-                    60% Cool
-                </div>
-                <div class="progress-bar progress-bar-danger" role="progressbar" style="width:40%">
-                    40% Lame
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Footer Section -->
-<footer class="text-center">
-    <p>2017 All Rights Reserved, SomeCompany.</p>
-</footer>
-
-<!-- Scripts for Bootstrap -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <footer class="footer">
+        <p>2017 All Rights Reserved, SomeCompany.</p>
+    </footer>
 </body>
 </html>
