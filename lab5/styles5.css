@@ -1,4 +1,4 @@
-/* styles.css */
+
 body {
   font-family: 'Lato', sans-serif;
   margin: 0;
@@ -201,15 +201,13 @@ body {
   padding: 10px;
   font-size: 0.9em;
 }
-/* Анхдагч хэв маяг: Бүх дэлгэцэнд тохирно */
 body {
   font-size: 18px;
   margin: 0;
   padding: 0;
   background-color: #f0f0f0;
 }
-
-/* Гар утасны дэлгэц (600px хүртэл) */
+/*gar utsand*/
 @media only screen and (max-width: 600px) {
   body {
     font-size: 14px;
@@ -219,8 +217,7 @@ body {
     padding: 10px;
   }
 }
-
-/* Таблетийн дэлгэц (600px - 768px хооронд) */
+/* tabletnd*/
 @media only screen and (min-width: 600px) and (max-width: 768px) {
   body {
     font-size: 16px;
@@ -230,8 +227,7 @@ body {
     padding: 20px;
   }
 }
-
-/* Дундаж дэлгэц - Ландшафтын горимтой таблет эсвэл жижиг компьютерууд (768px - 992px хооронд) */
+/* computert*/
 @media only screen and (min-width: 768px) and (max-width: 992px) {
   body {
     font-size: 17px;
@@ -241,8 +237,7 @@ body {
     padding: 30px;
   }
 }
-
-/* Том дэлгэц - Компьютерийн дэлгэц (992px - 1200px хооронд) */
+/*tom delgetsiinh*/
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   body {
     font-size: 18px;
@@ -252,8 +247,7 @@ body {
     padding: 40px;
   }
 }
-
-/* Маш том дэлгэц - Том компьютерууд (1200px-с дээш) */
+/* mash tom delgetsiinh */
 @media only screen and (min-width: 1200px) {
   body {
     font-size: 20px;
