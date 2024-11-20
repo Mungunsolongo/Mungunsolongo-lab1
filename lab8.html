@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Palindrome Checker</title>
+    <script>
+        function isPalindrome() {
+            const num = document.getElementById("number").value;
+            const sum = num.split("").reduce((acc, digit) => acc + parseInt(digit), 0);
+            const reversed = sum.toString().split("").reverse().join("");
+            document.getElementById("result1").textContent = 
+                sum.toString() === reversed ? "Palindrome" : "Not a Palindrome";
+        }
+    </script>
+</head>
+<body>
+    <h3>Palindrome Checker</h3>
+    <input type="text" id="number" placeholder="Enter a number">
+    <button onclick="isPalindrome()">Check</button>
+    <p id="result1"></p>
+</body>
+</html>
