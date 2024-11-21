@@ -1,40 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Palindrome Checker</title>
-    <script>
-        // Палиндром эсэхийг шалгах функц
-function isPalindrome(number) {
-    const str = number.toString(); // Тоог стринг болгож хөрвүүлэх
-    return str === str.split('').reverse().join(''); // Палиндром эсэхийг шалгах
-}
-
-// Гол функц
-function main() {
-    // Хэрэглэгчээс тоо авах
-    const number = prompt("Тоог оруулна уу:");
-
-    // Тооны цифрүүдийн нийлбэрийг тооцоолох
-    const digitSum = number.split('').reduce((sum, digit) => sum + parseInt(digit), 0);
-    alert(`Цифрүүдийн нийлбэр: ${digitSum}`);
-
-    // Палиндром эсэхийг шалгах
-    if (isPalindrome(digitSum)) {
-        alert(`${digitSum} нь палиндром мөн.`);
-    } else {
-        alert(`${digitSum} нь палиндром биш.`);
-    }
-}
-
-// Програмыг ажиллуулах
-main();
-
-    </script>
+   <title>Hello world</title>
 </head>
 <body>
-    <h3>Palindrome Checker</h3>
-    <input type="text" id="number" placeholder="Enter a number">
-    <button onclick="isPalindrome()">Check</button>
-    <p id="result1"></p>
+    
 </body>
 </html>
