@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Checker</title>
+</head>
+<body>
+    <header>
+        <h1>Palindrome Checker</h1>
+    </header>
+    <script>
+        var x = window.prompt("Тоо оруулна уу: ");
+        var y = parseInt(x); 
+
+       
+        var S = 0;
+        while (y > 0) {
+            S = S + y % 10; 
+            y = Math.floor(y / 10); 
+        }
+        var originalSum = S; 
+        var N = 0;
+        while (S > 0) {
+            N = N * 10 + S % 10; 
+            S = Math.floor(S / 10); 
+        }
+
+      
+        document.write("Цифрүүдийн нийлбэрийг урвуугаар бичсэн нь: " + N + "<br>");
+        if (originalSum == N) {
+            document.write("Цифрүүдийн нийлбэр палиндром мөн <br>");
+        } else {
+            document.write("Цифрүүдийн нийлбэр палиндром биш <br>");
+        }
+    </script>
+</body>
+</html>
+

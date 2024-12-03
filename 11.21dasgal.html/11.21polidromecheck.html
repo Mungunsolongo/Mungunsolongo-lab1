@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+        <header>
+         <h1>Polidrome</h1>
+        </header>
+        <body>
+        <script>
+            /*
+        
+        
+        
+            */
+                                                     
+            var x = window.prompt("utga oruul: ");         
+                                                    
+            var y = parseInt(x);                            
+                                                    
+            var S = 0;                   //ugsun utgiin hamgiin suuliin gishuun nuguu talas urvuugiin hamgin ehniih                   
+            while (y>0){ 
+                S = S*10 + y %10;                              
+                y = Math.floor(y /10);                  
+            };
+            document.write("erguulj bichsen too ni:" +S);
+            if (y == S)
+               document.write(x + "too ni palidrome mun");
+            else (y != S)
+               document.write(x + "too ni Palidrome bish");
+            
+        
+        </script>
+        </body>
+        </html>

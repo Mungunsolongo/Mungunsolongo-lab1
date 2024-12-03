@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Чоно туулайг гүйцэх хугацаа</title>
+</head>
+<body>
+    <header>
+        <br>Чоно 25 км/ц хурдтай, туулай 18 км/ц хурдтай. Гараас өгсөн зайтай байхад хэдэн минут, хэдэн секундын дараа гэхэд гүйцэх вэ?</br>
+    </header>
+    <script>
+        var d = window.prompt("Zai oruul (km):");
+        var x = parseInt(d); 
+        var hurd = 7;
+     
+        var T = (x / hurd);  
+
+        var s = T * 3600; 
+        var o = Math.floor(s / 3600); 
+        var u = Math.floor(s % 3600); 
+        document.writeln("Чоно " + d + " зайд байгаа туулайг гүйцэх хугацаа нь: " + o + " цаг " + u + " секунд байна.");
+    </script>
+</body>
+</html>

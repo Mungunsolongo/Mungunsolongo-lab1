@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+   
+</head>
+<body>
+    <script>
+     // GCD олох функц
+function gcd(a, b) {
+    return b === 0 ? a : gcd(b, a % b);
+}
+
+// LCM олох функц
+function lcm(a, b) {
+    return (a * b) / gcd(a, b);
+}
+
+// Хэрэглэгчээс 5 тоог авах
+let numbers = [];
+for (let i = 0; i < 5; i++) {
+    let num = parseInt(window.prompt("Тоо оруулна уу (" + (i + 1) + "/5):"));
+    numbers.push(num);
+}
+
+// Массивын LCM олох
+let result = numbers[0];
+for (let i = 1; i < numbers.length; i++) {
+    result = lcm(result, numbers[i]);
+}
+
+// Үр дүнг дэлгэцэнд харуулах
+document.write("Массивын хамгийн бага ерөнхий хуваагдагч: " + result);
+
+    </script>
+</body>
+</html>

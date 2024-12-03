@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<header>
+ <h1>Tsifruudiin niilber oldog program</h1>
+</header>
+<body>
+<script>
+    /*
+
+
+
+    */
+                                             //huvisagch zarlana ghdee ene n string bga
+    var x = window.prompt("too oruul: ");           //delgetsend toog oruulah heseg
+                                            //y gesen huvisagch zarlana
+    var y = parseInt(x);                            //y gesen huvisagch ni x gesen string iig toog olgoj baigaa
+                                            //S ni tsifruudiin niilber ni S ni ur dund nuluulhuurgui toogoor ehleh estoi
+    var S = 0;                                      //niilbert 0 nuluuluhgui uchraas 0s ehelne
+    while (y>0){                                  //nuhtsuluu bichne ()ene haaltand baigaa umiig unen gej uzeed {}haalt ni ajilladag6
+        S = S + y %10;                          //niilber ni=anhnii niilber buyu 0 +  y iig 10t huvaagaad uldegdliig avah uildel bichne
+        y = Math.floor(y /10);                  //uunii daraa math.floor function n butarhai tooni buhel hesgiig avdag uildeg hiine tged dahin {} finction ajillana
+    }
+    document.write("hariu:" + S);
+
+</script>
+</body>
+</html>
