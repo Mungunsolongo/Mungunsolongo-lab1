@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+    color: #333;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .nav a, .auth a {
+    margin: 0 0.5rem;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .auth .btn {
+    background-color: #00704A;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+  }
+  
+  .hero {
+    text-align: center;
+    background-color: #FDE2E2;
+    padding: 2rem 1rem;
+  }
+  
+  .hero img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .drinks, .gifts {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  
+  .drinks .drinks-images img {
+    max-width: 30%;
+    margin: 0 1%;
+  }
+  

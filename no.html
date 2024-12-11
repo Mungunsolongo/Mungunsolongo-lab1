@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+<h1>Random Yes/No Response</h1>
+<p id="response">Fetching content...</p>
+
+<script>
+// Function to fetch content from a given file URL
+async function fetchFile(file) {
+  try {
+    const response = await fetch(file);
+    if (response.ok) {
+      const text = await response.text();
+      document.getElementById("response").innerHTML = text; // Display content of the file
+    } else {
+      console.error('Error fetching file:', file);
+      document.getElementById("response").innerHTML = "Failed to load content.";
+    }
+  } catch (error) {
+    console.error('Error during fetch:', error);
+    document.getElementById("response").innerHTML = "An error occurred.";
+  }
+}
+
+
+function randomFetch() {
+  const files = ['yes.html', 'noo.html'];
+  const randomIndex = Math.floor(Math.random() * files.length); 
+  const selectedFile = files[randomIndex]; 
+  fetchFile(selectedFile); 
+
+
+randomFetch();
+</script>
+
+</body>
+</html>

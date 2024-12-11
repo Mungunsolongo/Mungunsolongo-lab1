@@ -8,24 +8,24 @@
 <body>
     <h1>Тооны үйлдэл</h1>
     <script>
-        // Одоогийн цагийг авах
+        
         const now = new Date();
         const hour = now.getHours();
 
-        // Хэрэглэгчээс тоо асуух
+        
         const number = parseFloat(window.prompt("Тоог оруулна уу:"));
 
         let result;
 
-        // Цагийг шалгана
+        
         if (hour >= 6 && hour < 18) {
-            // Өглөө: 2 зэрэг олох
+            
             result = Math.pow(number, 2);
-            document.write("Өглөөний үйлдэл: " + number + "-ын 2 зэрэг нь " + result);
+            document.write("Өглөө болж байгаа учир: " + number + "-ын 2 зэрэг нь " + result);
         } else {
-            // Орой: язгуур олох
+            
             result = Math.sqrt(number);
-            document.write("Оройн үйлдэл: " + number + "-ын язгуур нь " + result.toFixed(2));
+            document.write("Орой болж байгаа учир: " + number + "-ын язгуур нь " + result);
         }
     </script>
 </body>

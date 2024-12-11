@@ -1,0 +1,78 @@
+/* Reset some styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.logo {
+    height: 50px;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    margin: 0 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.buttons button {
+    margin-left: 10px;
+    padding: 8px 12px;
+    border: 1px solid #000;
+    border-radius: 20px;
+    background-color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px;
+    background-color: #f8f8f8;
+}
+
+.image-section img {
+    width: 400px;
+    height: auto;
+}
+
+.text-section {
+    text-align: left;
+}
+
+.text-section h1 {
+    font-size: 36px;
+    color: #d62828;
+    margin-bottom: 20px;
+}
+
+.text-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.text-section .play-now {
+    padding: 10px 20px;
+    background-color: white;
+    color: #d62828;
+    border: 2px solid #d62828;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}

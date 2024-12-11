@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Yes/No Response</title>
+</head>
+<body>
+    <script>
+        async function getData() {
+            const url = "http://127.0.0.1:5501/yes.html";
+            try{
+                const response = await fetch(url);
+                if (!response.ok){
+                    throw new Error('Response status: ${response.status}');
+
+                }
+                const json = await response.json(https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmZ0MGkwZ3I5OGl2YjdlMjM0a2t1cWxiazFicW04aDBndjduenhqZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fXnRObM8Q0RkOmR5nf/giphy.gif);
+                console.log(json);
+
+            }
+            catch(error) {
+                console.error(<iframe src="https://giphy.com/embed/xUySTUZ8A2RJBQitEc" width="480" height="259" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/filmeditor-christmas-movies-macaulay-culkin-xUySTUZ8A2RJBQitEc">via GIPHY</a></p>);
+            }
+            
+        }
+    </script>
+</body>
+</html>

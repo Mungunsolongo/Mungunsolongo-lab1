@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Үг Таах Тоглоом</title>
+</head>
+<body>
+    <h1>5 Үг Таах Тоглоом</h1>
+    <p id="word">_ _ _ _ _</p>
+    <p id="message"></p>
+    <input type="text" id="guess" maxlength="1" placeholder="Үсэг оруулна уу">
+    <button onclick="checkLetter()">Шалгах</button>
+    <br><br>
+    <img id="hangman-image" src="images/step0.png" alt="Hangman" width="200">
+
+    <script>
+        // Тоглоомын тохиргоо
+        const words = ["apple", "horse", "plane", "grass", "table"]; // 5 үг
+        let currentWordIndex = 0; // Одоо таах үгийн индекс
+        let secretWord = words[currentWordIndex];
+        let guessedWord = Array(secretWord.length).fill("_");
+        let attempts = 6; // Оролдлогын тоо
+        const images = [
+            "images/step0.png",
+            "images/step1.png",
+            "images/step2.png",
+            "images/step3.png",
+            "images/step4.png",
+            "images/step5.png",
+            "images/step6.png"
+        ]; // Зургийн жагсаалт
+
+        function updateWord() {
+            document.getElementById("word").innerText = guessedWord.join(" ");
+        }
+
+        function updateImage() {
+            document.getElementById("hangman-image").src = images[6 - attempts];
+        }
+
+        function checkLetter() {
+            const guess = document.getElementById("guess").value.toLowerCase();
+            document.getElementById("guess").value = ""; // Оруулсан үсгийг цэвэрлэнэ
+
+            if (guess.length === 1 && /[a-z]/.test(guess)) {
+                let found = false;
+                for (let i = 0; i < secretWord.length; i++) {
+                    if (secretWord[i] === guess) {
+                        guessedWord[i] = guess;
+                        found = true;
+                    }
+                }
+
+                if (!found) {
+                    attempts--;
+                    document.getElementById("message").innerText = `Буруу! Үлдсэн оролдлого: ${attempts}`;
+                    updateImage();
+                } else {
+                    document.getElementById("message").innerText = "Зөв!";
+                }
+
+                updateWord();
+
+                // Тоглоомын нөхцөл шалгах
+                if (guessedWord.join("") === secretWord) {
+                    document.getElementById("message").innerText = `Баяр хүргэе! Та "${secretWord}" үгийг зөв таалаа!`;
+                    currentWordIndex++;
+                    if (currentWordIndex < words.length) {
+                        // Дараагийн үг рүү шилжих
+                        secretWord = words[currentWordIndex];
+                        guessedWord = Array(secretWord.length).fill("_");
+                        attempts = 6;
+                        updateWord();
+                        updateImage();
+                    } else {
+                        document.getElementById("message").innerText = "Та бүх үгийг зөв таалаа! Тоглоом дууслаа.";
+                    }
+                } else if (attempts === 0) {
+                    document.getElementById("message").innerText = `Та хожигдлоо! Үг нь "${secretWord}" байсан. Тоглоом дууслаа.`;
+                }
+            } else {
+                document.getElementById("message").innerText = "Зөвхөн ганц үсэг оруулна уу!";
+            }
+        }
+
+        updateWord();
+    </script>
+</body>
+</html>

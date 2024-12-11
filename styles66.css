@@ -1,0 +1,159 @@
+.header{
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+
+}
+/* .container {
+    width: 100%;
+    border: 1px solid #ccc;
+    justify-content: center; 
+} */
+.mycontainer {
+    width: 40%;
+    overflow:auto;
+    display: flex; /* Флекс загварыг ашиглана */
+    justify-content: center;
+    justify-content: space-between;
+    
+}
+.mycontainer .menu .rewards .gift .store .sign .join {
+    width: 20%; /* Нэг баганы өргөн нийт мөрний 20% байна */
+    text-align: center; /* Текстийг баганын дунд оруулна */
+    padding: 10px; /* Дотор ирмэгт зай өгнө */
+    
+}
+.logo{
+    height: 60px;
+    width: 65px;
+}
+
+.store .join .sign{
+    align-items: flex-end;
+}
+.menu:hover {
+    color: green;
+}
+.rewards:hover {
+    color: green;
+}
+.gift:hover {
+    color: green;
+}
+.store:hover {
+    color: green;
+}
+.signin {
+    font-size: 16px; /* Үсгийн хэмжээ */
+    color: #000; /* Текстийн өнгө (хар) */
+    background-color: transparent; /* Арын өнгийг ил тод болгоно */
+    border: 1px solid #000; /* Хар хүрээтэй */
+    border-radius: 20px; /* Булангуудыг дугуйруулна */
+    padding: 5px 15px; /* Дотор ирмэгт зай өгнө (дээр/доор 5px, баруун/зүүн 15px) */
+    margin: 34px;
+    cursor: pointer; /* Хулгана товчлуурын дээр очих үед заагч гарч ирнэ */
+    outline: none; /* Товчийг дарсан үед гарах гаднах хүрээг арилгана */
+    transition: background-color 0.3s, color 0.3s; /* Хэтрүүлэлгүй зөөлөн өнгө шилжилт */
+  }
+  
+.signin:hover {
+    background-color: #000; /* Хулгана товчны дээр очих үед арын өнгө хар болно */
+    color: #fff; /* Текст цагаан болно */
+  }
+  
+.join {
+    border: 1px solid rgb(243, 240, 240);
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    background-color: rgb(0, 0, 0);
+    color: rgb(252, 246, 246);
+    cursor: pointer;
+}
+.join:hover {
+    background-color: #6e6e6e;
+}
+.mur1 {
+    /* width: 40%; */
+    display: flex; /* Flexbox ашиглана */
+    /* justify-content: space-between; Багануудын хоорондын зайг тэгшлэнэ */
+    justify-content: center;
+    align-items: center; /* Багануудыг босоо чиглэлд тэгшлэнэ */
+    /* gap: 20px; Хоёр баганын хооронд 20px зайтай болгоно */
+    /* padding: 20px; Контейнер дотор зай гаргана */
+    overflow:auto;
+  }
+.zurag1{
+    height: 400px;
+    width: 450px;
+    justify-content:center;
+
+}
+.bichig1{
+    font-family: Arial, sans-serif;
+    height: 400px;
+    background-color: #c8102e; /* Red background color */
+    color: white;
+    width: 450px;
+    justify-content: center;
+    padding: 0px;
+}
+.bichig1 h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Subtitle */
+  .bichig1 p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Button */
+  .play-button {
+    font-size: 16px;
+    color: #c8102e;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .play-button:hover {
+    background-color: #fff;
+    color: #c8102e;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+.mur2{
+    display: flex;
+    overflow:auto;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.bichig2 {
+    height: 400px;
+    width: 450px;
+    background-color: greenyellow;
+    align-items:center;
+    justify-content:center;
+    font-size: 18px;
+    
+}
+.zurag2 {
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 450px;
+}
