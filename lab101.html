@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мэдээний дэлгэрэнгүй</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 id="news-title"></h1>
+    </header>
+    <main>
+        <article id="news-content">
+            <!-- Мэдээний дэлгэрэнгүй мэдээлэл энд гарна -->
+        </article>
+    </main>
+    <footer>
+        <p>&copy; 2024 Мэдээний блог</p>
+    </footer>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+const newsId = params.get("newsId");
+
+// Мэдээний мэдээллийг тутамд оруулна
+const newsDetails = {
+    "1": {
+        title: "Шүүхийн ерөнхий зөвлөлийн шүүгч бус гишүүний сонгон шалгаруулалтын томилгооны сонсгол боллоо",
+        content: "Энэхүү сонсголын тухай дэлгэрэнгүй мэдээллийг энд оруулах..."
+    },
+    // Бусад мэдээг энд нэмнэ
+};
+
+// Дэлгэрэнгүй мэдээг гаргана
+if (newsId && newsDetails[newsId]) {
+    document.getElementById("news-title").textContent = newsDetails[newsId].title;
+    document.getElementById("news-content").innerHTML = newsDetails[newsId].content;
+}
+    </script>
+</body>
+</html>

@@ -4,23 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hangman</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            padding: 20px;
+            color: #f18226;
+        }
+
+        h1 {
+            color: #2680da;
+            margin-bottom: 20px;
+            font-size: 2em; /* Ихрүүлсэн том текст */
+        }
+
+        #word {
+            font-size: 2em;
+            letter-spacing: 3px;
+            margin: 20px 0;
+        }
+
+        #guess {
+            font-size: 1.5em; /* Оруулсан үсгийн текстийн хэмжээ */
+            padding: 10px;
+            width: 40px; /* Уялдох ширхэг */
+            text-align: center;
+            margin-right: 10px;
+        }
+
+        button {
+            font-size: 1.5em;
+            padding: 10px 20px;
+            background-color: #ec6911;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color:  #2ecc71;
+        }
+
+        #message {
+            font-size: 1.5em;
+            margin: 20px 0;
+            height: 40px;
+        }
+
+        #hangman-image {
+            margin: 20px 0;
+            max-width: 100%; /* Зургийг уялдах ширхэгээр тохируулах */
+            height: auto; /* Автомат өндөр */
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 1em;
+            color: #7f8c8d;
+        }
+
+        /* Responsive дизайн */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5em; /* Гар утсанд зориулсан том текст */
+            }
+
+            #word {
+                font-size: 1.5em;
+            }
+
+            #guess {
+                font-size: 1.2em; /* Оруулсан үсгийн текстийн хэмжээ */
+            }
+
+            button {
+                font-size: 1.2em;
+                padding: 8px 16px;
+            }
+
+            #message {
+                font-size: 1.2em;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1></h1>
+    <h1>Hangman Тоглоом</h1>
     <p id="word">_ _ _ _ _</p>
     <p id="message"></p>
-    <input type="text" id="guess" maxlength="1" placeholder="Үсэг оруулна уу">
+    <input type="text" id="guess" maxlength="1" placeholder="Үсэг">
     <button onclick="checkLetter()">Шалгах</button>
     <br><br>
-    <img id="hangman-image" src="images/step0.png" alt="Hangman" width="200">
+    <img id="hangman-image" src="images/step0.png" alt="Hangman">
 
     <script>
         // Тоглоомын тохиргоо
-        const words = ["Finland", "Romania", "Germany", "Hungary", "Austria"]; // 5 үг
-        let currentWordIndex = 0; // Одоо таах үгийн индекс
+        const words = ["Finland", "Romania", "Germany", "Hungary", "Austria"];
+        let currentWordIndex = 0;
         let secretWord = words[currentWordIndex];
         let guessedWord = Array(secretWord.length).fill("_");
-        let attempts = 5; // Оролдлогын тоо
+        let attempts = 5;
         const images = [
             "images/step0.png",
             "images/step1.png",
@@ -28,7 +113,7 @@
             "images/step3.png",
             "images/step4.png",
             "images/step5.png"
-        ]; // Зургийн жагсаалт
+        ];
 
         function updateWord() {
             document.getElementById("word").innerText = guessedWord.join(" ");
@@ -40,13 +125,13 @@
 
         function checkLetter() {
             const guess = document.getElementById("guess").value.toLowerCase();
-            document.getElementById("guess").value = ""; // Оруулсан үсгийг цэвэрлэнэ
+            document.getElementById("guess").value = "";
 
-            if (guess.length === 1 && /[a-z]/.test(guess)) {
+            if (guess.length === 1 && /[a-z]/i.test(guess)) {
                 let found = false;
                 for (let i = 0; i < secretWord.length; i++) {
-                    if (secretWord[i] === guess) {
-                        guessedWord[i] = guess;
+                    if (secretWord[i].toLowerCase() === guess) {
+                        guessed guessedWord[i] = secretWord[i];
                         found = true;
                     }
                 }
@@ -85,5 +170,8 @@
 
         updateWord();
     </script>
+    <footer>
+        <p>Hangman тоглоом явагдаж байна &copy; 2024</p>
+    </footer>
 </body>
 </html>

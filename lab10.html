@@ -1,44 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="mn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflix Clone</title>
-    <link rel="stylesheet" href="style10.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Мэдээнүүдийн жагсаалт</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Netflix Section -->
-        <section class="netflix-section">
-            <header class="netflix-header">
-                <div class="logo">NETFLIX</div>
-                <button class="sign-in-btn">Sign Out</button>
-            </header>
-            <div class="hero">
-                <h1>Unlimited movies, TV shows, and more</h1>
-                <p>Starts at USD 2.79. Cancel anytime.</p>
-                <button class="cta-btn">Finish Sign-Up</button>
-            </div>
-            <div class="content">
-                <!-- Trending Now -->
-                <h2>Trending Now</h2>
-                <div class="carousel">
-                    <img src="https://via.placeholder.com/150x200" alt="Arcane">
-                    <img src="https://via.placeholder.com/150x200" alt="The Phone Rings">
-                    <img src="https://via.placeholder.com/150x200" alt="The Trunk">
-                    <img src="https://via.placeholder.com/150x200" alt="Another Show">
-                </div>
-                <!-- Only on Netflix -->
-                <h2>Only on Netflix</h2>
-                <div class="carousel">
-                    <img src="https://via.placeholder.com/150x200" alt="Stranger Things">
-                    <img src="https://via.placeholder.com/150x200" alt="Culinary Wars">
-                    <img src="https://via.placeholder.com/150x200" alt="All of Us Are Dead">
-                    <img src="https://via.placeholder.com/150x200" alt="Sweet Home">
-                </div>
-            </div>
-        </section>
-    </div>
+    <header>
+        <h1>Мэдээнүүдийн жагсаалт</h1>
+    </header>
+    <main>
+        <ul id="news-list">
+            <!-- Мэдээнүүд энд нэмэгдэнэ -->
+        </ul>
+    </main>
+    <footer>
+        <p>&copy; 2024 Мэдээний блог</p>
+    </footer>
+    <script>
+        const newsList = [
+    {
+        title: "Шүүхийн ерөнхий зөвлөлийн шүүгч бус гишүүний сонгон шалгаруулалтын томилгооны сонсгол боллоо",
+        content: "Улсын Их Хурлын Хууль зүйн байнгын хорооноос өнөөдөр Шүүхийн ерөнхий зөвлөлийн шүүгч бус гишүүний хоёр нэр дэвшигчтэй хийх томилгооны сонсголыг зохион байгууллаа...",
+        detailPage: "detail.html?newsId=1"
+    },
+    // Бусад мэдээнүүдийг энд нэмнэ
+];
+
+window.onload = () => {
+    const ul = document.getElementById("news-list");
+    newsList.forEach(news => {
+        const li = document.createElement("li");
+        li.textContent = news.title;
+        li.onclick = () => {
+            window.location.href = news.detailPage;
+        };
+        ul.appendChild(li);
+    });
+};
+    </script>
 </body>
 </html>
