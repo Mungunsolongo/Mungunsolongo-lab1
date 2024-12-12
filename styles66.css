@@ -69,6 +69,9 @@
 .join button:hover {
     background-color: #6e6e6e;
 }
+main{
+    margin: 10px 760px 0 760px;
+}
 .mur1 {
     /* width: 40%; */
     display: flex; /* Flexbox ашиглана */
@@ -78,7 +81,7 @@
     /* gap: 20px; Хоёр баганын хооронд 20px зайтай болгоно */
     /* padding: 20px; Контейнер дотор зай гаргана */
     overflow:auto;
-    margin-bottom: 25px;
+    margin: 25px 0 25px 0;
   }
 .zurag1{
     height: 400px;
