@@ -4,12 +4,10 @@
 </head>
 <body>
     <script>
-     // Хамгийн бага ерөнхий хуваагдагчийг олох функц
 function HBE(a, b) {
     return b === 0 ? a : HBE(b, a % b);
 }
 
-// LCM олох функц
 function lcm(a, b) {
     return (a * b) / HBE(a, b);
 }

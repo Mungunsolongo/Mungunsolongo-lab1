@@ -6,7 +6,7 @@
     <title>Hangman</title>
 </head>
 <body>
-    <h1></h1>
+    <h1>Тоглоомд тавтай морил!</h1>
     <p id="word">_ _ _ _ _</p>
     <p id="message"></p>
     <input type="text" id="guess" maxlength="1" placeholder="Үсэг оруулна уу">
@@ -15,12 +15,11 @@
     <img id="hangman-image" src="images/step0.png" alt="Hangman" width="200">
 
     <script>
-        // Тоглоомын тохиргоо
-        const words = ["Finland", "Romania", "Germany", "Hungary", "Austria"]; // 5 үг
-        let currentWordIndex = 0; // Одоо таах үгийн индекс
+        const words = ["Finland", "Romania", "Germany", "Hungary", "Austria"]; 
+        let currentWordIndex = 0; 
         let secretWord = words[currentWordIndex];
         let guessedWord = Array(secretWord.length).fill("_");
-        let attempts = 5; // Оролдлогын тоо
+        let attempts = 5; 
         const images = [
             "images/step0.png",
             "images/step1.png",
@@ -28,7 +27,7 @@
             "images/step3.png",
             "images/step4.png",
             "images/step5.png"
-        ]; // Зургийн жагсаалт
+        ]; 
 
         function updateWord() {
             document.getElementById("word").innerText = guessedWord.join(" ");
@@ -40,7 +39,7 @@
 
         function checkLetter() {
             const guess = document.getElementById("guess").value.toLowerCase();
-            document.getElementById("guess").value = ""; // Оруулсан үсгийг цэвэрлэнэ
+            document.getElementById("guess").value = ""; 
 
             if (guess.length === 1 && /[a-z]/.test(guess)) {
                 let found = false;
@@ -61,12 +60,14 @@
 
                 updateWord();
 
-                // Тоглоомын нөхцөл шалгах
+                //Nuhtsuluu shalgah hesegggg
                 if (guessedWord.join("") === secretWord) {
                     document.getElementById("message").innerText = `Баяр хүргэе! Та "${secretWord}" үгийг зөв таалаа!`;
                     currentWordIndex++;
                     if (currentWordIndex < words.length) {
-                        // Дараагийн үг рүү шилжих
+                        
+
+
                         secretWord = words[currentWordIndex];
                         guessedWord = Array(secretWord.length).fill("_");
                         attempts = 5;
