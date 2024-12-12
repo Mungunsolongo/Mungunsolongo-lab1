@@ -1,0 +1,4 @@
+# WWW руу дахин чиглүүлэх
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^mungunsolongo.github.io/Mungunsolongo-lab1/lab66.html [NC]
+RewriteRule ^(.*)$ https://mungunsolongo.github.io/Mungunsolongo-lab1/lab66.html/$1 [L,R=301]
