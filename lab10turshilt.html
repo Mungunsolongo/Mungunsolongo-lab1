@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шинэ мэдээ - iKon.mn</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        article {
+            margin: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #007bff;
+            cursor: pointer; /* гарчиг дээр дарж нээх боломжийг тодотгох */
+        }
+        p {
+            margin: 10px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            font-size: 0.8em;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Шинэ мэдээ - iKon.mn</h1>
+    <p>Шинэ мэдээ, мэдээллийг эндээс уншаарай!</p>
+</header>
+
+<main>
+    <article>
+        <h2 onclick="window.open('мэдээний_дэлгэрэнгүй_page_url1.html', '_blank')">Шүүхийн ерөнхий зөвлөлийн шүүгч бус гишүүний сонгон шалгаруулалтын томилгооны сонсгол боллоо</h2>
+        <p>Улсын Их Хурлын Хууль зүйн байнгын хорооноос өнөөдөр (2024.12.11) Шүүхийн ерөнхий зөвлөлийн шүүгч бус гишүүний хоёр нэр дэвшигчтэй хийх томилгооны сонсголыг зохион байгууллаа.</p>
+    </article>
+    
+    <article>
+        <h2 onclick="window.open('мэдээний_дэлгэрэнгүй_page_url2.html', '_blank')">Дахин боловсруулцгаая аяны хүрээнд Монгол Улс 2030 он гэхэд хүлэмжийн хийн ялгаруулалтаа 22.7 тонноор бууруулах зорилго тавьсан</h2>
+        <p>Байгаль дэлхийгээ хайрлан хамгаалж, хог хаягдлаа ангилан ялгах хүсэлтэй аж ахуйн нэгжүүдэд мэдээлэл олгож, чиглүүлэх зорилготой "Дахин боловсруулцгаая-Go Recycle" арга хэмжээг өнөөдөр зохион байгууллаа.</p>
+    </article>
+    <article>
+        <h2 onclick="window.open('мэдээний_дэлгэрэнгүй_page_url3.html', '_blank')">Д.Бум-Очир гишүүн УИХ-ын даргад "загнуулснаар" Кино урлагийг дэмжих сантай холбоотой саналаа татав</h2>
+        <p>УИХ-ын чуулганы хуралдаанаар 2025 оны төсвийн тухай хуулийн хоёр дахь хэлэлцүүлгийг хийж байна.</p>
+    </article>
+    <article>
+        <h2 onclick="window.open('мэдээний_дэлгэрэнгүй_page_url4.html', '_blank')">Б.Чойжилсүрэн: Он дуустал цахилгаан хязгаарлахыг үгүйсгэхгүй</h2>
+        <p></p>
+    </article>
+    <!-- Бусад мэдээг энэ хэрээр оруулж болно -->
+</main>
+<script>
+    const feedContainer = document.getElementById("rss-feed");
+
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://corsproxy.io/?https://ikon.mn/rss");
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            const parser = new DOMParser();
+            const xmlDoc = parser.parseFromString(xhr.responseText, "text/xml");
+            const items = xmlDoc.getElementsByTagName("item");
+            for (let i = 0; i < items.length; i++) {
+                const title = items[i].getElementsByTagName("title")[0].textContent;
+                const link = items[i].getElementsByTagName("link")[0].textContent;
+                feedContainer.innerHTML += `<p><a href="${link}" target="_blank">${title}</a></p>`;
+            }
+        } else {
+            console.error("RSS татахад алдаа гарлаа. Статус: " + xhr.status);
+        }
+    };
+    xhr.onerror = function () {
+        console.error("Хүсэлт илгээхэд алдаа гарлаа.");
+    };
+    xhr.send();
+</script>
+<footer>
+    <p>&copy; 2024 iKon.mn. Бүх эрх хуулиар хамгаалагдсан.</p>
+</footer>
+
+</body>
+</html>

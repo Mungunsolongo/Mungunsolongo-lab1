@@ -1,52 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Starbucks Holiday</title>
-  <link rel="stylesheet" href="turshilt.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+
+        footer {
+            background-color: #f8f8f8;
+            padding: 40px 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-text {
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .footer-column {
+            width: 22%;
+            min-width: 150px;
+            margin-bottom: 20px;
+        }
+
+        .footer-column h4 {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-column ul li a {
+            text-decoration: none;
+            color: #00754a;
+            font-size: 12px;
+        }
+
+        .social-icons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            margin: 0 8px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #666;
+        }
+
+        .copyright {
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .footer-column {
+                width: 100%;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header class="header">
-    <div class="logo">STARBUCKS</div>
-    <nav class="nav">
-      <a href="#">Menu</a>
-      <a href="#">Rewards</a>
-      <a href="#">Gift Cards</a>
-    </nav>
-    <div class="auth">
-      <a href="#">Find a store</a>
-      <a href="#">Sign in</a>
-      <a href="#" class="btn">Join now</a>
-    </div>
-  </header>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-text">
+                *No Purchase Necessary. U.S. 18+. See Official Rules for alternate method. Enter by 1/5/25. Starbucks for Life means the winner will receive a daily credit for 30 years for one free food or beverage item at participating Starbucks stores in the U.S. Excludes alcohol.<br>
+                **Valid only for new Starbucks Rewards members for 7 days from sign-up order. Offer good at participating stores for a handcrafted menu-sized beverage with qualifying purchase ($8 max value). Qualifying purchase excludes alcohol, Starbucks card and Starbucks card reloads.<br>
+                ***At participating Starbucks stores within the U.S. from 11/19/24 to 12/25, for each protein box sold, Starbucks will donate the monetary equivalent of one meal to Feeding America.
+            </div>
 
-  <main>
-    <section class="hero">
-      <div class="hero-content">
-        <img src="holiday-characters.png" alt="Holiday characters">
-        <h1>Our holiday game is here to play</h1>
-        <p>Pop in for chances to win $20,000 in Delta Gift Cards or Starbucks for Life!</p>
-        <a href="#" class="btn">Play now</a>
-      </div>
-    </section>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>About Us</h4>
+                    <ul>
+                        <li><a href="#">Our Company</a></li>
+                        <li><a href="#">Our Coffee</a></li>
+                        <li><a href="#">About Starbucks</a></li>
+                        <li><a href="#">Starbucks Archive</a></li>
+                        <li><a href="#">Investor Relations</a></li>
+                        <li><a href="#">Customer Service</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
 
-    <section class="drinks">
-      <h2>Joy in every sip</h2>
-      <p>Taste the magic of the holidays with a Peppermint Mocha, Caramel Brulée Latte or Chestnut Praline Latte.</p>
-      <a href="#" class="btn">Order now</a>
-      <div class="drinks-images">
-        <img src="drink1.png" alt="Drink 1">
-        <img src="drink2.png" alt="Drink 2">
-        <img src="drink3.png" alt="Drink 3">
-      </div>
-    </section>
+                <div class="footer-column">
+                    <h4>Careers</h4>
+                    <ul>
+                        <li><a href="#">Culture and Values</a></li>
+                        <li><a href="#">Inclusion, Diversity, & Belonging</a></li>
+                        <li><a href="#">College Achievement Plan</a></li>
+                        <li><a href="#">Alumni Community</a></li>
+                        <li><a href="#">U.S. Careers</a></li>
+                        <li><a href="#">International Careers</a></li>
+                    </ul>
+                </div>
 
-    <section class="gifts">
-      <h2>Merry last-minute gifts</h2>
-      <p>There's still time to send a holiday Starbucks eGift. Choose your favorite design and share.</p>
-      <img src="gift-card.png" alt="Gift card">
-    </section>
-  </main>
+                <div class="footer-column">
+                    <h4>Social Impact</h4>
+                    <ul>
+                        <li><a href="#">Communities</a></li>
+                        <li><a href="#">Starbucks Foundation</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                        <li><a href="#">Environmental and Social Impact Reporting</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Order and Pick Up</h4>
+                    <ul>
+                        <li><a href="#">Order on the App</a></li>
+                        <li><a href="#">Order on the Web</a></li>
+                        <li><a href="#">Delivery</a></li>
+                        <li><a href="#">Order and Pick Up Options</a></li>
+                        <li><a href="#">Explore and Find Coffee for Home</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="social-icons">
+                <a href="#">&#xf16d;</a> <!-- Example of a social icon -->
+                <a href="#">&#xf16a;</a>
+                <a href="#">&#xf16e;</a>
+                <a href="#">&#xf08c;</a>
+                <a href="#">&#xf099;</a>
+            </div>
+
+            <div class="copyright">
+                &copy; 2024 Starbucks Coffee Company. All rights reserved.
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

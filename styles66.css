@@ -83,6 +83,7 @@
     /* gap: 20px; Хоёр баганын хооронд 20px зайтай болгоно */
     /* padding: 20px; Контейнер дотор зай гаргана */
     overflow:auto;
+    margin-bottom: 25px;
   }
 .zurag1{
     height: 400px;
@@ -90,31 +91,57 @@
     justify-content:center;
 
 }
-.bichig1{
-    font-family: Arial, sans-serif;
-    height: 400px;
-    background-color: #c8102e; /* Red background color */
-    color: white;
+.content1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px; /* Бүх дэлгэцийн өндрийг ашиглана */
     width: 450px;
-    justify-content: center;
-    padding: 0px;
+    margin: 0;
+    background-color: #8B0026; /* Зураг дээрх улаан өнгө */
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
 }
+
+/* Контентын бүс */
+.bichig1 {
+    max-width: 600px;
+    padding: 20px;
+}
+
+/* Үндсэн гарчиг */
 .bichig1 h1 {
-    font-size: 36px;
-    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+/* Бага гарчиг */
+.bichig1 p {
+    font-size: 1rem;
     margin-bottom: 20px;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /* Subtitle */
-  .bichig1 p {
-    font-size: 18px;
     line-height: 1.5;
-    margin-bottom: 30px;
-    justify-content: center;
-    align-items: center;
-  }
+}
+
+/* Товчлуурын загвар */
+.bichig1 .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 20px;
+    background: none;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Хулгана товчлуур дээр ирэх үед */
+.bichig1 .btn:hover {
+    background-color: white;
+    color: #8B0026;
+}
   
   /* Button */
   .play-button {
@@ -140,20 +167,518 @@
     overflow:auto;
     justify-content: center;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
-.bichig2 {
-    height: 400px;
+.content2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px; /* Бүх дэлгэцийн өндрийг ашиглана */
     width: 450px;
-    background-color: greenyellow;
-    align-items:center;
-    justify-content:center;
-    font-size: 18px;
-    
+    margin: 0;
+    background-color: #26D19D; /* Зураг дээрх улаан өнгө */
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
 }
+
+/* Контентын бүс */
+.bcihig2 {
+    max-width: 600px;
+    padding: 20px;
+}
+
+/* Үндсэн гарчиг */
+.bichig2 h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+/* Бага гарчиг */
+.bichig2 p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Товчлуурын загвар */
+.bichig2 .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 20px;
+    background: none;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Хулгана товчлуур дээр ирэх үед */
+.bichig2 .btn:hover {
+    background-color: white;
+    color: #26D19D;
+}
+  
+  /* Button */
+  .play-button {
+    font-size: 16px;
+    color: #26D19D;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .play-button:hover {
+    background-color: #fff;
+    color: #26D19D;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+    
+
 .zurag2 {
     justify-content: center;
     align-items: center;
     height: 400px;
     width: 450px;
 }
+.mur3 {
+    /* width: 40%; */
+    display: flex; /* Flexbox ашиглана */
+    /* justify-content: space-between; Багануудын хоорондын зайг тэгшлэнэ */
+    justify-content: center;
+    align-items: center; /* Багануудыг босоо чиглэлд тэгшлэнэ */
+    /* gap: 20px; Хоёр баганын хооронд 20px зайтай болгоно */
+    /* padding: 20px; Контейнер дотор зай гаргана */
+    overflow:auto;
+    margin-bottom: 20px;
+  }
+.zurag3{
+    height: 400px;
+    width: 450px;
+    justify-content:center;
+
+}
+.content3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px; /* Бүх дэлгэцийн өндрийг ашиглана */
+    width: 450px;
+    margin: 0;
+    background-color:  #8B0026; /* Зураг дээрх улаан өнгө */
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+/* Контентын бүс */
+.bcihig3 {
+    max-width: 600px;
+    padding: 20px;
+}
+
+/* Үндсэн гарчиг */
+.bichig3 h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+/* Бага гарчиг */
+.bichig3 p {
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Товчлуурын загвар */
+.bichig3 .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 20px;
+    background: none;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Хулгана товчлуур дээр ирэх үед */
+.bichig3 .btn:hover {
+    background-color: white;
+    color:  #8B0026;
+}
+  
+  /* Button */
+  .play-button {
+    font-size: 16px;
+    color:  #8B0026;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .play-button:hover {
+    background-color: #fff;
+    color:  #8B0026;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  .mur4 {
+    /* width: 40%; */
+    display: flex; /* Flexbox ашиглана */
+    /* justify-content: space-between; Багануудын хоорондын зайг тэгшлэнэ */
+    justify-content: center;
+    align-items: center; /* Багануудыг босоо чиглэлд тэгшлэнэ */
+    /* gap: 20px; Хоёр баганын хооронд 20px зайтай болгоно */
+    /* padding: 20px; Контейнер дотор зай гаргана */
+    overflow:auto;
+    margin-bottom: 20px;
+  }
+.content4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 280px; /* Бүх дэлгэцийн өндрийг ашиглана */
+    width: 450px;
+    margin: 0;
+    background-color:  #F9F8F4; /* Зураг дээрх улаан өнгө */
+    font-family: Arial, sans-serif;
+    color: rgb(33, 65, 7);
+    text-align: center;
+}
+
+/* Контентын бүс */
+.bcihig4 {
+    max-width: 600px;
+    padding: 20px;
+}
+
+/* Үндсэн гарчиг */
+.bichig4 h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+/* Бага гарчиг */
+.bichig4 p {
+    font-size: 0.7rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Товчлуурын загвар */
+.bichig4 .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid rgb(33, 65, 7);
+    border-radius: 20px;
+    background: none;
+    color: rgb(33, 65, 7);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Хулгана товчлуур дээр ирэх үед */
+.bichig4 .btn:hover {
+    background-color: rgb(33, 65, 7);
+    color:  #F9F8F4;
+}
+  
+  /* Button */
+  .play-button {
+    font-size: 16px;
+    color:  #F9F8F4;
+    background-color: rgb(33, 65, 7);
+    border: 2px solid rgb(33, 65, 7);
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .play-button:hover {
+    background-color: rgb(33, 65, 7);
+    color:  #F9F8F4;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  .zurag4{
+    height: 280px;
+    width: 450px;
+    justify-content:center;
+  }
+  .mur5 {
+    /* width: 40%; */
+    display: flex; /* Flexbox ашиглана */
+    /* justify-content: space-between; Багануудын хоорондын зайг тэгшлэнэ */
+    justify-content: center;
+    align-items: center; /* Багануудыг босоо чиглэлд тэгшлэнэ */
+    /* gap: 20px; Хоёр баганын хооронд 20px зайтай болгоно */
+    /* padding: 20px; Контейнер дотор зай гаргана */
+    overflow:auto;
+    margin-bottom: 20px;
+  }
+.content5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 280px; /* Бүх дэлгэцийн өндрийг ашиглана */
+    width: 450px;
+    margin: 0;
+    background-color:  #8B0026; /* Зураг дээрх улаан өнгө */
+    font-family: Arial, sans-serif;
+    color: #fff;
+    text-align: center;
+}
+
+/* Контентын бүс */
+.bcihig5 {
+    max-width: 600px;
+    padding: 20px;
+}
+
+/* Үндсэн гарчиг */
+.bichig5 h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+/* Бага гарчиг */
+.bichig5 p {
+    font-size: 0.6rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Товчлуурын загвар */
+.bichig5 .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    background: none;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Хулгана товчлуур дээр ирэх үед */
+.bichig5 .btn:hover {
+    background-color: #fff;
+    color:  #8B0026;
+}
+  
+  /* Button */
+  .play-button {
+    font-size: 16px;
+    color:  #8B0026;
+    background-color: #fff;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .play-button:hover {
+    background-color: #fff;
+    color:  #8B0026;
+    box-shadow: 0px 4px 10px #fff;
+  }
+  .zurag5{
+    height: 280px;
+    width: 450px;
+    justify-content:center;
+  }
+  .mur6 {
+    /* width: 40%; */
+    display: flex; /* Flexbox ашиглана */
+    /* justify-content: space-between; Багануудын хоорондын зайг тэгшлэнэ */
+    justify-content: center;
+    align-items: center; /* Багануудыг босоо чиглэлд тэгшлэнэ */
+    /* gap: 20px; Хоёр баганын хооронд 20px зайтай болгоно */
+    /* padding: 20px; Контейнер дотор зай гаргана */
+    overflow:auto;
+    margin-bottom: 20px;
+  }
+.content6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px; /* Бүх дэлгэцийн өндрийг ашиглана */
+    width: 450px;
+    margin: 0;
+    background-color:  #26D19D; /* Зураг дээрх улаан өнгө */
+    font-family: Arial, sans-serif;
+    color: #000;
+    text-align: center;
+}
+
+/* Контентын бүс */
+.bcihig6 {
+    max-width: 200px;
+    padding: 20px;
+    
+}
+
+/* Үндсэн гарчиг */
+.bichig6 h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    
+}
+
+/* Бага гарчиг */
+.bichig6 p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Товчлуурын загвар */
+.bichig6 .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #000;
+    border-radius: 20px;
+    background: none;
+    color: #000;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Хулгана товчлуур дээр ирэх үед */
+.bichig6 .btn:hover {
+    background-color: #000;
+    color:  #26D19D;
+}
+  
+  /* Button */
+  .play-button {
+    font-size: 16px;
+    color: #26D19D;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .play-button:hover {
+    background-color: #fff;
+    color:  #26D19D;
+    box-shadow: 0px 4px 10px #fff;
+  }
+  .zurag6{
+    height: 400px;
+    width: 450px;
+    justify-content:center;
+  }
+  footer {
+    background-color: #f8f8f8;
+    padding: 40px 20px;
+    border-top: 1px solid #ddd;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-text {
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    width: 22%;
+    min-width: 150px;
+    margin-bottom: 20px;
+}
+
+.footer-column h4 {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #00754a;
+    font-size: 12px;
+}
+
+.social-icons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 8px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #666;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .footer-column {
+        width: 100%;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+   
