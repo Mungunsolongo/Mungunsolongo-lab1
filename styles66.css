@@ -4,74 +4,69 @@
     justify-content: space-around;
 
 }
-/* .container {
-    width: 100%;
-    border: 1px solid #ccc;
-    justify-content: center; 
-} */
-.mycontainer {
-    width: 40%;
-    overflow:auto;
-    display: flex; /* Флекс загварыг ашиглана */
-    justify-content: center;
-    justify-content: space-between;
-    
-}
-.mycontainer .menu .rewards .gift .store .sign .join {
-    width: 20%; /* Нэг баганы өргөн нийт мөрний 20% байна */
-    text-align: center; /* Текстийг баганын дунд оруулна */
-    padding: 10px; /* Дотор ирмэгт зай өгнө */
-    
-}
-.logo{
-    height: 60px;
-    width: 65px;
+.header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 400px 10px 400px;
 }
 
-.store .join .sign{
-    align-items: flex-end;
+.mycontainer {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-.menu:hover {
+
+.logo img {
+    height: 50px;
+}
+
+.menu, .rewards, .gift, .store, .signin, .join {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    font-size: 14px;
+    color: #000;
+}
+
+.menu:hover, .rewards:hover, .gift:hover, .store:hover {
     color: green;
+    cursor: pointer;
 }
-.rewards:hover {
-    color: green;
+
+.store {
+    margin-right: 5px;
 }
-.gift:hover {
-    color: green;
-}
-.store:hover {
-    color: green;
-}
+
 .signin {
-    font-size: 16px; /* Үсгийн хэмжээ */
-    color: #000; /* Текстийн өнгө (хар) */
-    background-color: transparent; /* Арын өнгийг ил тод болгоно */
-    border: 1px solid #000; /* Хар хүрээтэй */
-    border-radius: 20px; /* Булангуудыг дугуйруулна */
-    padding: 5px 15px; /* Дотор ирмэгт зай өгнө (дээр/доор 5px, баруун/зүүн 15px) */
-    margin: 34px;
-    cursor: pointer; /* Хулгана товчлуурын дээр очих үед заагч гарч ирнэ */
-    outline: none; /* Товчийг дарсан үед гарах гаднах хүрээг арилгана */
-    transition: background-color 0.3s, color 0.3s; /* Хэтрүүлэлгүй зөөлөн өнгө шилжилт */
-  }
-  
+    border: none;
+    font-size: 14px;
+    border: 1px solid #000;
+    border-radius: 20px;
+    padding: 0px 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
 .signin:hover {
-    background-color: #000; /* Хулгана товчны дээр очих үед арын өнгө хар болно */
-    color: #fff; /* Текст цагаан болно */
-  }
-  
-.join {
-    border: 1px solid rgb(243, 240, 240);
+    background-color: #000;
+    color: #fff;
+}
+
+.join button {
+    border: none;
     border-radius: 20px;
     padding: 5px 15px;
     font-size: 14px;
     font-family: Arial, sans-serif;
-    background-color: rgb(0, 0, 0);
-    color: rgb(252, 246, 246);
+    background-color: #000;
+    color: #fff;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
-.join:hover {
+
+.join button:hover {
     background-color: #6e6e6e;
 }
 .mur1 {
@@ -599,6 +594,26 @@
     width: 450px;
     justify-content:center;
   }
+
+  .promo-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px 0 0 520px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+}
+
+.promo-content p {
+    color: #555;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
   footer {
     background-color: #f8f8f8;
     padding: 40px 20px;
@@ -648,16 +663,16 @@
 
 .footer-column ul li a {
     text-decoration: none;
-    color: #00754a;
+    color: #686868;
     font-size: 12px;
 }
 
-.social-icons {
+.social-links {
     text-align: center;
     margin-top: 20px;
 }
 
-.social-icons a {
+.social-links a {
     margin: 0 8px;
     text-decoration: none;
     font-size: 20px;
@@ -681,4 +696,97 @@
         align-items: center;
     }
 }
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+  }
+  
+  .social-icons img:hover {
+    transform: scale(1.1);
+  }
+  
+  .footer-links {
+    /* list-style: none; */
+    padding: 0;
+    margin: 15px 0;
+  }
+  
+  .footer-links li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  .footer-links a {
+    text-decoration: none;
+    color: #7a7a7a;
+    font-size: 14px;
+  }
+  
+  .footer-links a:hover {
+    color: #000000;
+  }
+  
+
+
+  footer {
+    background-color: #f8f8f8;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto 20px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 150px; /* Ensure columns don't shrink too much */
+    margin: 10px;
+}
+
+.footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    display: block;
+    color: #444;
+    text-decoration: none;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.footer-column a:hover {
+    color: #000000;
+}
+
+.footer-legal {
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.footer-legal a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer-legal a:hover {
+    text-decoration: underline;
+}
+
    
