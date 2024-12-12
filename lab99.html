@@ -16,7 +16,7 @@
         h1 {
             color: #2680da;
             margin-bottom: 20px;
-            font-size: 2em; /* Ихрүүлсэн том текст */
+            font-size: 2em; 
         }
 
         #word {
@@ -26,9 +26,9 @@
         }
 
         #guess {
-            font-size: 1.5em; /* Оруулсан үсгийн текстийн хэмжээ */
+            font-size: 1.5em; 
             padding: 10px;
-            width: 40px; /* Уялдох ширхэг */
+            width: 40px; 
             text-align: center;
             margin-right: 10px;
         }
@@ -55,8 +55,8 @@
 
         #hangman-image {
             margin: 20px 0;
-            max-width: 100%; /* Зургийг уялдах ширхэгээр тохируулах */
-            height: auto; /* Автомат өндөр */
+            max-width: 100%; 
+            height: auto; 
         }
 
         footer {
@@ -65,10 +65,9 @@
             color: #7f8c8d;
         }
 
-        /* Responsive дизайн */
         @media (max-width: 600px) {
             h1 {
-                font-size: 1.5em; /* Гар утсанд зориулсан том текст */
+                font-size: 1.5em; 
             }
 
             #word {
@@ -76,8 +75,7 @@
             }
 
             #guess {
-                font-size: 1.2em; /* Оруулсан үсгийн текстийн хэмжээ */
-            }
+                font-size: 1.2em; 
 
             button {
                 font-size: 1.2em;
@@ -88,6 +86,7 @@
                 font-size: 1.2em;
             }
         }
+    }
     </style>
 </head>
 <body>
@@ -146,12 +145,12 @@
 
                 updateWord();
 
-                // Тоглоомын нөхцөл шалгах
+                //Nuhtsuluu shalgana
                 if (guessedWord.join("") === secretWord) {
                     document.getElementById("message").innerText = `Баяр хүргэе! Та "${secretWord}" үгийг зөв таалаа!`;
                     currentWordIndex++;
                     if (currentWordIndex < words.length) {
-                        // Дараагийн үг рүү шилжих
+                      
                         secretWord = words[currentWordIndex];
                         guessedWord = Array(secretWord.length).fill("_");
                         attempts = 5;
