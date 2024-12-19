@@ -3,166 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Монголын Үлгэрүүд</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        header {
-            background-color: #003a77;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            width: 100%;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2rem;
-        }
-
-        #main-container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .story-item {
-            margin-bottom: 20px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .story-item:last-child {
-            border-bottom: none;
-        }
-
-        .story-item img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        .story-item h2 {
-            margin-top: 10px;
-            color: #003a77;
-        }
-
-        .story-item p {
-            margin: 10px 0;
-            color: #333;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            font-size: 0.9rem;
-            color: #888;
-            width: 100%;
-            background-color: #f1f1f1;
-            margin-top: 20px;
-        }
-    </style>
+    <title>Мэдээний сайт</title>
 </head>
 <body>
+    <script>
+        // RSS өгөгдөл авах
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", " https://ikon.mn/rss");
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(xhr.responseText, "text/xml");
+               console.log(xmlDoc);
+            } else {
+                console.error("RSS татахад алдаа гарлаа."); // herwee ogogdol amjilttai irbel console deer ogogdliig hewlene
+            }
+        };
+        xhr.onerror = function () {
+            console.error("Хүсэлт илгээхэд алдаа гарлаа."); //ogogdliig awahad aldaa garwal console deer ug string hewlegdene
+        };
+        xhr.send();
 
-    <header>
-        <h1>Монголын Үлгэрүүд</h1>
-        <p>Таны хүүхэд багачуудад зориулсан гайхамшигт үлгэрүүд энд байна.</p>
-    </header>
-
-    <div id="main-container">
-        <div class="story-item">
-            <h2>1. Алтан Загалмай</h2>
-            <img src="image1_1.jpg" alt="Алтан Загалмай үлгэрийн зураг 1">
-            <img src="image1_2.jpg" alt="Алтан Загалмай үлгэрийн зураг 2">
-            <p>Тайлбар: Энэ бол Алтан Загалмай үлгэрийн товч тайлбар байна...</p>
-        </div>
-
-        <div class="story-item">
-            <h2>2. Хэрэм Буглаа</h2>
-            <img src="image2_1.jpg" alt="Хэрэм Буглаа үлгэрийн зураг 1">
-            <img src="image2_2.jpg" alt="Хэрэм Буглаа үлгэрийн зураг 2">
-            <p>Тайлбар: Энэ бол Хэрэм Буглаа үлгэрийн товч тайлбар байна...</p>
-        </div>
-
-        <div class="story-item">
-            <h2>3. Арслан ба Гүүш</h2>
-            <img src="image3_1.jpg" alt="Арслан ба Гүүш үлгэрийн зураг 1">
-            <img src="image3_2.jpg" alt="Арслан ба Гүүш үлгэрийн зураг 2">
-            <p>Тайлбар: Энэ бол Арслан ба Гүүш үлгэрийн товч тайлбар байна...</p>
-        </div>
-
-        <!-- Үлгэр 4 -->
-        <div class="story-item">
-            <h2>4. Бадарчин ба Чоно</h2>
-            <img src="image4_1.jpg" alt="Бадарчин ба Чоно үлгэрийн зураг 1">
-            <img src="image4_2.jpg" alt="Бадарчин ба Чоно үлгэрийн зураг 2">
-            <p>Тайлбар: Энэ бол Бадарчин ба Чоно үлгэрийн товч тайлбар байна...</p>
-        </div>
-
-        <!-- Үлгэр 5 -->
-        <div class="story-item">
-            <h2>5. Хайрхан Таван Тариа</h2>
-            <img src="image5_1.jpg" alt="Хайрхан Таван Тариа үлгэрийн зураг 1">
-            <img src="image5_2.jpg" alt="Хайрхан Таван Тариа үлгэрийн зураг 2">
-            <p>Тайлбар: Энэ бол Хайрхан Таван Тариа үлгэрийн товч тайлбар байна...</p>
-        </div>
-
-        <!-- Үлгэр 6 -->
-        <div class="story-item">
-            <h2>6. Хоёр Түмэн Жаргал</h2>
-            <img src="image6_1.jpg" alt="Хоёр Түмэн Жаргал үлгэрийн зураг 1">
-            <img src="image6_2.jpg" alt="Хоёр Түмэн Жаргал үлгэрийн зураг 2">
-            <p>Тайлбар: Энэ бол Хоёр Түмэн Жаргал үлгэрийн товч тайлбар байна...</p>
-        </div>
-
-        <!-- Үлгэр 7 -->
-        <div class="story-item">
-            <h2>7. Гурван Төрлийн Охиул</h2>
-            <img src="image7_1.jpg" alt="Гурван Төрлийн Охиул үлгэрийн зураг 1">
-            <img src="image7_2.jpg" alt="Гурван Төрлийн Охиул үлгэрийн зураг 2">
-            <p>Тайлбар: Энэ бол Гурван Төрлийн Охиул үлгэрийн товч тайлбар байна...</p>
-        </div>
-
-        <!-- Үлгэр 8 -->
-        <div class="story-item">
-            <h2>8. Ганган Тунгалаг</h2>
-            <img src="image8_1.jpg" alt="Ганган Тунгалаг үлгэрийн зураг 1">
-            <img src="image8_2.jpg" alt="Ганган Тунгалаг үлгэрийн зураг 2">
-            <p>Тайлбар: Энэ бол Ганган Тунгалаг үлгэрийн товч тайлбар байна...</p>
-        </div>
-
-        <!-- Үлгэр 9 -->
-        <div class="story-item">
-            <h2>9. Хөвсгөл Ухахуй</h2>
-            <img src="image9_1.jpg" alt="Хөвсгөл Ухахуй үлгэрийн зураг 1">
-            <img src="image9_2.jpg" alt="Хөвсгөл Ухахуй үлгэрийн зураг 2">
-            <p>Тайлбар: Энэ бол Хөвсгөл Ухахуй үлгэрийн товч тайлбар байна...</p>
-        </div>
-
-        <!-- Үлгэр 10 -->
-        <div class="story-item">
-            <h2>10. Тосон Хулс</h2>
-            <img src="image10_1.jpg" alt="Тосон Хулс үлгэрийн зураг 1">
-            <img src="image10_2.jpg" alt="Тосон Хулс үлгэрийн зураг 2">
-            <p>Тайлбар: Энэ бол Тосон Хулс үлгэрийн товч тайлбар байна...</p>
-        </div>
-    </div>
-
-    <footer>
-        <p>&copy; 2024 Монголын Үлгэрүүд. Бүх эрх хуулиар хамгаалагдсан.</p>
-    </footer>
-
+    </script>
 </body>
 </html>
