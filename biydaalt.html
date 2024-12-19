@@ -1,76 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scientific Calculator</title>
-    <link rel="stylesheet" href="biydaalt.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scientific Calculator</title>
+  <link rel="stylesheet" href="biydaalt.css">
 </head>
 <body>
-    <div class="calculator-container">
-        <div class="calculator">
-            <input type="text" id="display" disabled placeholder="0">
-            <div class="buttons">
-                <!-- Scientific Functions -->
-                <button onclick="appendCharacter('Math.sin(')">sin</button>
-                <button onclick="appendCharacter('Math.cos(')">cos</button>
-                <button onclick="appendCharacter('Math.tan(')">tan</button>
-                <button onclick="appendCharacter('Math.log(')">log</button>
-                <button onclick="appendCharacter('Math.sqrt(')">√</button>
-                <button onclick="appendCharacter('**')">x²</button>
-                <button onclick="clearDisplay()">C</button>
-                <button onclick="backspace()">⌫</button>
-
-                <!-- Numbers and Operators -->
-                <button onclick="appendCharacter('7')">7</button>
-                <button onclick="appendCharacter('8')">8</button>
-                <button onclick="appendCharacter('9')">9</button>
-                <button onclick="appendCharacter('/')">/</button>
-
-                <button onclick="appendCharacter('4')">4</button>
-                <button onclick="appendCharacter('5')">5</button>
-                <button onclick="appendCharacter('6')">6</button>
-                <button onclick="appendCharacter('*')">*</button>
-
-                <button onclick="appendCharacter('1')">1</button>
-                <button onclick="appendCharacter('2')">2</button>
-                <button onclick="appendCharacter('3')">3</button>
-                <button onclick="appendCharacter('-')">-</button>
-
-                <button onclick="appendCharacter('0')">0</button>
-                <button onclick="appendCharacter('.')">.</button>
-                <button onclick="appendCharacter('+')">+</button>
-                <button onclick="calculateResult()">=</button>
-            </div>
-        </div>
+  <div class="calculator">
+    <input type="text" id="display" class="display" />
+    <div class="buttons">
+      <button class="button" onclick="appendToDisplay('7')">7</button>
+      <button class="button" onclick="appendToDisplay('8')">8</button>
+      <button class="button" onclick="appendToDisplay('9')">9</button>
+      <button class="button operator" onclick="appendToDisplay('/')">/</button>
+      <button class="button" onclick="appendToDisplay('4')">4</button>
+      <button class="button" onclick="appendToDisplay('5')">5</button>
+      <button class="button" onclick="appendToDisplay('6')">6</button>
+      <button class="button operator" onclick="appendToDisplay('*')">*</button>
+      <button class="button" onclick="appendToDisplay('1')">1</button>
+      <button class="button" onclick="appendToDisplay('2')">2</button>
+      <button class="button" onclick="appendToDisplay('3')">3</button>
+      <button class="button operator" onclick="appendToDisplay('-')">-</button>
+      <button class="button" onclick="appendToDisplay('0')">0</button>
+      <button class="button" onclick="appendToDisplay('.')">.</button>
+      <button class="button operator" onclick="appendToDisplay('+')">+</button>
+      <button class="button clear" onclick="clearDisplay()">C</button>
+      <button class="button function" onclick="calculateSquareRoot()">√</button>
+      <button class="button function" onclick="calculateExponent()">x²</button>
+      <button class="button function" onclick="calculateSin()">sin</button>
+      <button class="button function" onclick="calculateCos()">cos</button>
+      <button class="button function" onclick="calculateTan()">tan</button>
+      <button class="button function" onclick="calculatePi()">π</button>
+      <button class="button function" onclick="calculateLog()">log</button>
+      <button class="button equals" onclick="calculateResult()">=</button>
     </div>
-    <script>
-        let display = document.getElementById("display");
+  </div>
+  <script>
+    let display = document.getElementById("display");
 
-// Append a character or function to the input
-function appendCharacter(character) {
-    display.value += character;
-}
-
-// Clear the display
-function clearDisplay() {
-    display.value = "";
-}
-
-// Delete the last character
-function backspace() {
-    display.value = display.value.slice(0, -1);
-}
-
-// Evaluate and calculate the result
-function calculateResult() {
-    try {
-        display.value = eval(display.value);
-    } catch (e) {
-        display.value = "Error";
+    function appendToDisplay(value) { //tovchluur darahad utguudiig harrulna 1 + , 1+ geh met 
+      display.value += value;
     }
-}
 
-    </script>
+    function clearDisplay() {
+      display.value = "";
+    }
+
+    function calculateResult() {
+      try {
+        if (display.value) {
+          display.value = Function('"use strict"; return (' + display.value + ')')(); //string mode iluu aldaagui bh, iluu changa mode
+        }
+      } catch (error) {
+        display.value = "Error";
+      }
+    }
+
+    function calculateSquareRoot() {
+      const currentValue = parseFloat(display.value);
+      if (!isNaN(currentValue) && currentValue >= 0) { //utga bodit eyreg too esehiig shalgana
+        display.value = Math.sqrt(currentValue);
+      } else {
+        display.value = "Error";
+      }
+    }
+
+    function calculateExponent() {
+      const currentValue = parseFloat(display.value);
+      display.value = Math.pow(currentValue, 2);
+    }
+
+    function calculateSin() {
+      const currentValue = parseFloat(display.value);
+      display.value = Math.sin(toRadians(currentValue));
+    }
+
+    function calculateCos() {
+      const currentValue = parseFloat(display.value);
+      display.value = Math.cos(toRadians(currentValue));
+    }
+
+    function calculateTan() {
+      const currentValue = parseFloat(display.value);
+      display.value = Math.tan(toRadians(currentValue));
+    }
+
+    function calculatePi() {
+      display.value = Math.PI;
+    }
+
+    function calculateLog() {
+      const currentValue = parseFloat(display.value);
+      if (currentValue > 0) {
+        display.value = Math.log10(currentValue);
+      } else {
+        display.value = "Error";
+      }
+    }
+
+    function toRadians(degrees) {
+      return degrees * (Math.PI / 180);
+    }
+  </script>
 </body>
 </html>

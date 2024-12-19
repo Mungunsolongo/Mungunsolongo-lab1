@@ -1,170 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="mn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Footer Layout</title>
+    <title>Монголын Үлгэрүүд</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
             margin: 0;
             padding: 0;
-            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #003a77;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        #main-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .story-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .story-item:last-child {
+            border-bottom: none;
+        }
+
+        .story-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .story-item h2 {
+            margin-top: 10px;
+            color: #003a77;
+        }
+
+        .story-item p {
+            margin: 10px 0;
+            color: #333;
         }
 
         footer {
-            background-color: #f8f8f8;
-            padding: 40px 20px;
-            border-top: 1px solid #ddd;
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer-text {
             text-align: center;
-            font-size: 12px;
-            color: #666;
-            line-height: 1.5;
-            margin-bottom: 30px;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-
-        .footer-column {
-            width: 22%;
-            min-width: 150px;
-            margin-bottom: 20px;
-        }
-
-        .footer-column h4 {
-            font-size: 14px;
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        .footer-column ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .footer-column ul li {
-            margin-bottom: 8px;
-        }
-
-        .footer-column ul li a {
-            text-decoration: none;
-            color: #00754a;
-            font-size: 12px;
-        }
-
-        .social-icons {
-            text-align: center;
+            padding: 10px;
+            font-size: 0.9rem;
+            color: #888;
+            width: 100%;
+            background-color: #f1f1f1;
             margin-top: 20px;
-        }
-
-        .social-icons a {
-            margin: 0 8px;
-            text-decoration: none;
-            font-size: 20px;
-            color: #666;
-        }
-
-        .copyright {
-            text-align: center;
-            font-size: 12px;
-            color: #666;
-            margin-top: 20px;
-        }
-
-        @media (max-width: 768px) {
-            .footer-column {
-                width: 100%;
-            }
-
-            .footer-links {
-                flex-direction: column;
-                align-items: center;
-            }
         }
     </style>
 </head>
 <body>
-    <footer>
-        <div class="footer-container">
-            <div class="footer-text">
-                *No Purchase Necessary. U.S. 18+. See Official Rules for alternate method. Enter by 1/5/25. Starbucks for Life means the winner will receive a daily credit for 30 years for one free food or beverage item at participating Starbucks stores in the U.S. Excludes alcohol.<br>
-                **Valid only for new Starbucks Rewards members for 7 days from sign-up order. Offer good at participating stores for a handcrafted menu-sized beverage with qualifying purchase ($8 max value). Qualifying purchase excludes alcohol, Starbucks card and Starbucks card reloads.<br>
-                ***At participating Starbucks stores within the U.S. from 11/19/24 to 12/25, for each protein box sold, Starbucks will donate the monetary equivalent of one meal to Feeding America.
-            </div>
 
-            <div class="footer-links">
-                <div class="footer-column">
-                    <h4>About Us</h4>
-                    <ul>
-                        <li><a href="#">Our Company</a></li>
-                        <li><a href="#">Our Coffee</a></li>
-                        <li><a href="#">About Starbucks</a></li>
-                        <li><a href="#">Starbucks Archive</a></li>
-                        <li><a href="#">Investor Relations</a></li>
-                        <li><a href="#">Customer Service</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
-                </div>
+    <header>
+        <h1>Монголын Үлгэрүүд</h1>
+        <p>Таны хүүхэд багачуудад зориулсан гайхамшигт үлгэрүүд энд байна.</p>
+    </header>
 
-                <div class="footer-column">
-                    <h4>Careers</h4>
-                    <ul>
-                        <li><a href="#">Culture and Values</a></li>
-                        <li><a href="#">Inclusion, Diversity, & Belonging</a></li>
-                        <li><a href="#">College Achievement Plan</a></li>
-                        <li><a href="#">Alumni Community</a></li>
-                        <li><a href="#">U.S. Careers</a></li>
-                        <li><a href="#">International Careers</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-column">
-                    <h4>Social Impact</h4>
-                    <ul>
-                        <li><a href="#">Communities</a></li>
-                        <li><a href="#">Starbucks Foundation</a></li>
-                        <li><a href="#">Sustainability</a></li>
-                        <li><a href="#">Environmental and Social Impact Reporting</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-column">
-                    <h4>Order and Pick Up</h4>
-                    <ul>
-                        <li><a href="#">Order on the App</a></li>
-                        <li><a href="#">Order on the Web</a></li>
-                        <li><a href="#">Delivery</a></li>
-                        <li><a href="#">Order and Pick Up Options</a></li>
-                        <li><a href="#">Explore and Find Coffee for Home</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="social-icons">
-                <a href="#">&#xf16d;</a> <!-- Example of a social icon -->
-                <a href="#">&#xf16a;</a>
-                <a href="#">&#xf16e;</a>
-                <a href="#">&#xf08c;</a>
-                <a href="#">&#xf099;</a>
-            </div>
-
-            <div class="copyright">
-                &copy; 2024 Starbucks Coffee Company. All rights reserved.
-            </div>
+    <div id="main-container">
+        <div class="story-item">
+            <h2>1. Алтан Загалмай</h2>
+            <img src="image1_1.jpg" alt="Алтан Загалмай үлгэрийн зураг 1">
+            <img src="image1_2.jpg" alt="Алтан Загалмай үлгэрийн зураг 2">
+            <p>Тайлбар: Энэ бол Алтан Загалмай үлгэрийн товч тайлбар байна...</p>
         </div>
+
+        <div class="story-item">
+            <h2>2. Хэрэм Буглаа</h2>
+            <img src="image2_1.jpg" alt="Хэрэм Буглаа үлгэрийн зураг 1">
+            <img src="image2_2.jpg" alt="Хэрэм Буглаа үлгэрийн зураг 2">
+            <p>Тайлбар: Энэ бол Хэрэм Буглаа үлгэрийн товч тайлбар байна...</p>
+        </div>
+
+        <div class="story-item">
+            <h2>3. Арслан ба Гүүш</h2>
+            <img src="image3_1.jpg" alt="Арслан ба Гүүш үлгэрийн зураг 1">
+            <img src="image3_2.jpg" alt="Арслан ба Гүүш үлгэрийн зураг 2">
+            <p>Тайлбар: Энэ бол Арслан ба Гүүш үлгэрийн товч тайлбар байна...</p>
+        </div>
+
+        <!-- Үлгэр 4 -->
+        <div class="story-item">
+            <h2>4. Бадарчин ба Чоно</h2>
+            <img src="image4_1.jpg" alt="Бадарчин ба Чоно үлгэрийн зураг 1">
+            <img src="image4_2.jpg" alt="Бадарчин ба Чоно үлгэрийн зураг 2">
+            <p>Тайлбар: Энэ бол Бадарчин ба Чоно үлгэрийн товч тайлбар байна...</p>
+        </div>
+
+        <!-- Үлгэр 5 -->
+        <div class="story-item">
+            <h2>5. Хайрхан Таван Тариа</h2>
+            <img src="image5_1.jpg" alt="Хайрхан Таван Тариа үлгэрийн зураг 1">
+            <img src="image5_2.jpg" alt="Хайрхан Таван Тариа үлгэрийн зураг 2">
+            <p>Тайлбар: Энэ бол Хайрхан Таван Тариа үлгэрийн товч тайлбар байна...</p>
+        </div>
+
+        <!-- Үлгэр 6 -->
+        <div class="story-item">
+            <h2>6. Хоёр Түмэн Жаргал</h2>
+            <img src="image6_1.jpg" alt="Хоёр Түмэн Жаргал үлгэрийн зураг 1">
+            <img src="image6_2.jpg" alt="Хоёр Түмэн Жаргал үлгэрийн зураг 2">
+            <p>Тайлбар: Энэ бол Хоёр Түмэн Жаргал үлгэрийн товч тайлбар байна...</p>
+        </div>
+
+        <!-- Үлгэр 7 -->
+        <div class="story-item">
+            <h2>7. Гурван Төрлийн Охиул</h2>
+            <img src="image7_1.jpg" alt="Гурван Төрлийн Охиул үлгэрийн зураг 1">
+            <img src="image7_2.jpg" alt="Гурван Төрлийн Охиул үлгэрийн зураг 2">
+            <p>Тайлбар: Энэ бол Гурван Төрлийн Охиул үлгэрийн товч тайлбар байна...</p>
+        </div>
+
+        <!-- Үлгэр 8 -->
+        <div class="story-item">
+            <h2>8. Ганган Тунгалаг</h2>
+            <img src="image8_1.jpg" alt="Ганган Тунгалаг үлгэрийн зураг 1">
+            <img src="image8_2.jpg" alt="Ганган Тунгалаг үлгэрийн зураг 2">
+            <p>Тайлбар: Энэ бол Ганган Тунгалаг үлгэрийн товч тайлбар байна...</p>
+        </div>
+
+        <!-- Үлгэр 9 -->
+        <div class="story-item">
+            <h2>9. Хөвсгөл Ухахуй</h2>
+            <img src="image9_1.jpg" alt="Хөвсгөл Ухахуй үлгэрийн зураг 1">
+            <img src="image9_2.jpg" alt="Хөвсгөл Ухахуй үлгэрийн зураг 2">
+            <p>Тайлбар: Энэ бол Хөвсгөл Ухахуй үлгэрийн товч тайлбар байна...</p>
+        </div>
+
+        <!-- Үлгэр 10 -->
+        <div class="story-item">
+            <h2>10. Тосон Хулс</h2>
+            <img src="image10_1.jpg" alt="Тосон Хулс үлгэрийн зураг 1">
+            <img src="image10_2.jpg" alt="Тосон Хулс үлгэрийн зураг 2">
+            <p>Тайлбар: Энэ бол Тосон Хулс үлгэрийн товч тайлбар байна...</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Монголын Үлгэрүүд. Бүх эрх хуулиар хамгаалагдсан.</p>
     </footer>
+
 </body>
 </html>

@@ -3,26 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ikon RSS</title>
+    <title>iKon.mn Мэдээний Блог</title>
     <style>
-        .logo {
-            height: 75px;
-            width: 150px;
-        }
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
+      
+        /*gar utsand*/
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 14px;
+    background-color: #e0f7fa;
+  }
+  .container {
+    padding: 10px;
+  }
+}
+/* tabletnd*/
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  body {
+    font-size: 16px;
+    background-color: #fff3e0;
+  }
+  .container {
+    padding: 20px;
+  }
+}
+/* computert*/
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  body {
+    font-size: 17px;
+    background-color: #e1bee7;
+  }
+  .container {
+    padding: 30px;
+  }
+}
+/*tom delgetsiinh*/
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  body {
+    font-size: 18px;
+    background-color: #c5cae9;
+  }
+  .container {
+    padding: 40px;
+  }
+}
+/* mash tom delgetsiinh */
+@media only screen and (min-width: 1200px) {
+  body {
+    font-size: 20px;
+    background-color: #dcedc8;
+  }
+  .container {
+    padding: 50px;
+  }
+}
         body {
             font-family: Arial, sans-serif;
-            background-color: #f8f8f8;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
             flex-direction: column;
+            align-items: center;
         }
 
         header {
@@ -31,119 +72,116 @@
             padding: 20px;
             text-align: center;
             width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
         }
 
-        .header-content {
-            display: flex;
-            align-items: center;
-        }
-
-        .header-content .logo {
-            width: 150px; /* Логог жижиг хэмжээнд байрлуулна */
-            height: auto;
-            margin-right: 10px;
-        }
-
-        .ikon h1 {
-            font-size: 2rem;
+        header h1 {
             margin: 0;
+            font-size: 2rem;
         }
 
-        .ikon p {
-            font-size: 1rem;
-        }
-
-        #rss-feed {
-            width: 50%;
-            margin-top: 30px;
+        #blog-container {
+            max-width: 800px;
+            margin: 20px auto;
             padding: 20px;
             background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .rss-item {
-            margin-bottom: 15px;
-            padding: 10px;
-            background: #f4f4f4;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
-        .rss-item a {
+        .blog-item {
+            margin-bottom: 15px;
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .blog-item:last-child {
+            border-bottom: none;
+        }
+
+        .blog-item a {
             text-decoration: none;
-            color: #000000;
+            font-size: 1.2rem;
             font-weight: bold;
-            font-size: 1.1rem;
+            color: #003a77;
         }
 
-        .rss-item a:hover {
-            background-color: #f4f4f4;
-            color: #104bcc;
+        .blog-item a:hover {
+            color: #007acc;
         }
 
         footer {
             text-align: center;
             padding: 10px;
-            font-size: 0.8em;
+            font-size: 0.9rem;
             color: #888;
-            margin-top: 50px;
+            width: 100%;
+            background-color: #f1f1f1;
+            margin-top: 20px;
+        }
+        .medee{
+            color: #f1f1f1;
+        }
+        .medee :hover{
+            color: chocolate;
+
         }
     </style>
 </head>
 <body>
     <header>
         <div class="header-content">
-            <img src="Screenshot 2024-12-12 034405.png" alt="ikon logo" class="logo"> <!-- Лого -->
+            <img src="Screenshot 2024-12-12 034405.png" alt="ikon logo" class="logo">
             <div class="ikon">
                 <h1>Шинэ мэдээ - iKon.mn</h1>
-                <p>Шинэ мэдээ, мэдээллийг эндээс уншаарай!</p>
+                <a href="./lab10delgerengui.html" target="_blank" rel="noopener noreferrer" class="medee">Шинэ мэдээ, мэдээллийн дэлгэрэнгүйг эндээс уншаарай!</a>
             </div>
         </div>
     </header>
 
-    <div id="rss-feed"></div>
+    <div id="blog-container">
+        <p>Мэдээнүүд ачааллаж байна...</p>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 iKon.mn. Бүх эрх хуулиар хамгаалагдсан.</p>
+    </footer>
 
     <script>
-        const feedContainer = document.getElementById("rss-feed");
+        const blogContainer = document.getElementById("blog-container");
 
-        const xhr = new XMLHttpRequest();
-        xhr.open("GET", "https://corsproxy.io/?https://ikon.mn/rss");
-        xhr.onload = function () {
-            if (xhr.status === 200) {
+        
+        fetch("https://api.allorigins.win/get?url=" + encodeURIComponent("https://ikon.mn/rss"))
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("RSS уншихад алдаа гарлаа: " + response.statusText);
+                }
+                return response.json();
+            })
+            .then(data => {
                 const parser = new DOMParser();
-                const xmlDoc = parser.parseFromString(xhr.responseText, "text/xml");
+                const xmlDoc = parser.parseFromString(data.contents, "text/xml");
                 const items = xmlDoc.getElementsByTagName("item");
+
+                blogContainer.innerHTML = ""; //text iig ustgana
 
                 for (let i = 0; i < items.length; i++) {
                     const title = items[i].getElementsByTagName("title")[0].textContent;
                     const link = items[i].getElementsByTagName("link")[0].textContent;
 
-                    const feedItem = document.createElement("div");
-                    feedItem.classList.add("rss-item");
+                    const blogItem = document.createElement("div");
+                    blogItem.classList.add("blog-item");
 
-                    feedItem.innerHTML = `
+                    blogItem.innerHTML = `
                         <a href="${link}" target="_blank">${title}</a>
                     `;
 
-                    feedContainer.appendChild(feedItem);
+                    blogContainer.appendChild(blogItem);
                 }
-            } else {
-                console.error("RSS татахад алдаа гарлаа. Статус: " + xhr.status);
-            }
-        };
-        xhr.onerror = function () {
-            console.error("Хүсэлт илгээхэд алдаа гарлаа.");
-        };
-        xhr.send();
+            })
+            .catch(error => {
+                blogContainer.innerHTML = `<p style="color: red;">Алдаа гарлаа: ${error.message}</p>`;
+                console.error(error);
+            });
     </script>
-
-    <footer>
-        <p>&copy; 2024 iKon.mn. Бүх эрх хуулиар хамгаалагдсан.</p>
-    </footer>
 </body>
 </html>
